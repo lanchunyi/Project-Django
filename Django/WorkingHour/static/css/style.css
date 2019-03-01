@@ -1,0 +1,39 @@
+* {
+    vertical-align: middle;
+}
+.header-top {
+    background-color: white;
+    height: 90px;
+    margin: auto 0px;
+}
+
+.st_head {
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+.st_content {
+    background-color: burlywood;
+    width: 80%;
+    text-align:  center;
+    margin: 0px auto;
+    height: 1000px;
+}
+
+.layout {
+    background-color: aqua;
+}
+.st_col {
+    margin: auto 0px;
+}
+.img_logo{
+    width: 55px;
+    height: 55px;
+}
+
+.side_right {
+    background-color: wheat;
+}
+    

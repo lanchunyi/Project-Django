@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+    <head>
+       <title>
+       {% block title %}
+         base
+       {% endblock  %}
+       </title>
+       {% load static %}
+       <link rel="stylesheet" href={% static '\css\bootstrap.css' %}>
+       <link rel="stylesheet" href={% static '\css\style.css' %}
+    </head>
+    <body>
+       <div class='site'>
+        <div class = 'header-top'>
+    {% block head %}
+        <div class='row st_head'>
+           <div class='col-md-4 st_col'>
+              <h2>Home</h2>
+           </div>
+           <div class='col-md-4 st_col'>
+              {% load static %}
+              <img class="img-responsive img_logo" src={% static '\imgs\g.png' %}>
+           </div>
+           <div class='col-md-4 st_col'>
+               <h2>pass</h2>
+           </div>
+        </div>
+    {% endblock head %}
+       </div>
+       <div class="layout">
+       <div class="row st_content">
+          <div class='col-md-8 content'>
+    {% block content %}
+            <div class='first_content'>
+            </div>
+    {% endblock content %}
+          </div>
+          <div class='col-md-4 side_right'>
+        {% block side_right %}
+            <div class='total'>
+               <h2>说明</h2>
+            </div>
+            <div class='login_block'>
+            </div>
+        {% endblock side_right %}
+          </div>
+       </div>
+       </div>
+       </div>
+    </body>
+
+</html>
