@@ -22,8 +22,17 @@
     height: 1000px;
 }
 
+.content {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    margin: 0 auto;
+}
+
+.main_nill img{
+    width: 100%;
+}
+
 .layout {
-    background-color: aqua;
+    background-color: #f2f2f2;
 }
 .st_col {
     margin: auto 0px;
@@ -34,6 +43,46 @@
 }
 
 .side_right {
-    background-color: wheat;
+    background-color: #f2f2f2;
+    padding: 40px;
 }
-    
+
+.lg_layout {
+    text-align: center;
+}
+
+.widget {
+    width: 100%;
+    height: 230px;
+    margin-top: 45px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url("/static/imgs/branch-texture.png");
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+}
+
+.sib_signup_form {
+    margin-top: 20px;
+}
+
+
+p {
+    height: 35px;
+}
+
+p input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: white;
+}
+
+.sib-submit input {
+    width: 100%;
+    border: 0;
+    background-color: #29292a;
+    color: white;
+}

@@ -2,3 +2,39 @@
 {% block title %}
 login
 {% endblock title %}
+
+{% block content %}
+<div class="main_nill">
+    <a href="#">
+        {% load static %}
+        <img src={% static '/imgs/promo-image-soh.jpg' %}></img>
+    </a>
+
+</div>
+{% endblock content %}
+
+{% block side_right %}
+<div class="">
+   <h4>turtoral</h4>
+</div>
+<div class="lg_layout">
+  <section class="widget">
+    <h2>请登录</h2>
+    <form id="login_form" method="post" class="sib_signup_form" action="/index">
+        {% csrf_token %}
+        {{ form }}
+        <div class="sib_signup_box_inside_2">
+            <p class="sib-user-area">
+                <input type="text" placeholder="username" name="username"/>
+            </p>
+            <p class="sib-passwd">
+                <input type="password" placeholder="password" name="password"/>
+            </p>
+            <p class="sib-submit">
+                <input type="submit">
+            </p>
+        </div>
+    </form>
+  </section>
+</div>
+{% endblock side_right %}

@@ -6,3 +6,11 @@ def hello(request):
 
 def login(request):
     return(render(request, "WorkingHour/login.html"))
+
+def index(request):
+    try:
+        user = request.POST['username']
+        pwd = request.POST['password']
+    except Exception as e:
+        return render(request, "WorkingHour/login.html")
+    return HttpResponse(user+ "  " + pwd)

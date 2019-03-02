@@ -20,6 +20,7 @@ import WorkingHour.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
-    path("login/", views.login)
+    path("login/", views.login),
+    path("index", views.index)
 ]
     
