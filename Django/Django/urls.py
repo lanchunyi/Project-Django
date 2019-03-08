@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
 import WorkingHour.views as views
+from Django import settings
+# import patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +26,10 @@ urlpatterns = [
     path("login/", views.login),
     path("index", views.index)
 ]
+# if settings.DEBUG is False:
+#     urlpatterns += patterns('',
+#         url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
+#             'document_root': settings.STATIC_ROOT,
+#         }),
+#    )
     
