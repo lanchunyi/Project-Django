@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
+from django.views import static
 import WorkingHour.views as views
 from Django import settings
 # import patterns
@@ -24,7 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
     path("login/", views.login),
-    path("index", views.index)
+    path("index", views.index),
+    url(r'^static/(?P<path>.*)$', static.serve,
+        {'document_root': settings.STATIC_ROOT}, name='static')  # 解决静态文件加载失败问题
 ]
 # if settings.DEBUG is False:
 #     urlpatterns += patterns('',
@@ -32,4 +35,3 @@ urlpatterns = [
 #             'document_root': settings.STATIC_ROOT,
 #         }),
 #    )
-    
