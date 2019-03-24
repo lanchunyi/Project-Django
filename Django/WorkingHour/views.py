@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse,render_to_response
 from WorkingHour.utils.ldapAuth import ldapAuth
 from WorkingHour.forms import LoginForm
+from django import forms
 
 # Create your views here.
 def hello(request):
@@ -13,17 +14,15 @@ def index(request):
     try:
         if(request.method == "POST"):
             loginForm = LoginForm(request.POST)
-        if(loginForm.is_valid):
-            user = loginForm.data["username"]
-            pwd = loginForm.data["password"]
-        else:
-            return render(request, "WorkingHour/login.html")
-        auth = ldapAuth(user, pwd)
-        # return(HttpResponse("True") if auth.ldapconn() else HttpResponse("False"))
-        if(auth.ldapconn()):
-            return HttpResponse("True")
-        else:
-            return HttpResponse("False")
-    except Exception as e:
+        if(loginForm.is_valid()):
+            return(HttpResponse("True"))
+        print(type(loginForm.errors))
+        for (key, value) in loginForm.errors.items():
+            print(key, value)
+            return HttpResponse(value)
+        
+    except forms.ValidationError as e:
         print(e)
-        return render(request, "WorkingHour/login.html")
+        return(HttpResponse(e))
+    except Exception as e:
+        return(HttpResponse("False"))

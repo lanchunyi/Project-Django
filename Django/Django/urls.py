@@ -19,7 +19,6 @@ from django.conf.urls import url
 from django.views import static
 import WorkingHour.views as views
 from Django import settings
-# import patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
