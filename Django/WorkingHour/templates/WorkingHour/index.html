@@ -1,0 +1,51 @@
+{% extends 'WorkingHour/base.html' %}
+{% block title %}
+index
+{% endblock title %}
+{% block head %}
+<dir class="row first_row">
+    <div class='logo_dec col-md-4'>
+        <div class='row'>
+            <div class='logo_img col-md-2'>
+            {% load static %}
+                <img src={% static '/imgs/g.png' %}/>
+            </div>
+            <div class='appa_name col-md-9'>
+                <h3>WorkingHour System</h3>
+            </div>
+        </div>
+    </div>
+    <div class='backup col-md-4'>
+        
+    </div>
+    <div class='account_info col-md-4'>
+        <div class='row'>
+            <div class='headphoto col-md-2'>
+            {% load static %}
+                <img src={% static '/imgs/g.png' %}/>
+            </div>
+            <div class='username col-md-2'>
+                <h3>account</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock head %}
+
+{% block st_content %}
+<div class='st1_layout row'>
+    <div class='leftbar col-md-2'>
+        <div class='project row'>
+            <a href="#">project</a>
+        </div>
+        <div class='history row'>
+            <a href="#">history</a>
+        </div>
+        <div class='modify row'>
+            <a href="#">modify</a>
+        </div>
+    </div>
+    <div class='st1_content col-md-10'>
+    </div>
+</div>
+{% endblock st_content %}

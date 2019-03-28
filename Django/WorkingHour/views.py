@@ -15,7 +15,7 @@ def index(request):
         if(request.method == "POST"):
             loginForm = LoginForm(request.POST)
         if(loginForm.is_valid()):
-            return(HttpResponse("True"))
+            return(render(request, "WorkingHour/index.html"))
         print(type(loginForm.errors))
         for (key, value) in loginForm.errors.items():
             print(key, value)

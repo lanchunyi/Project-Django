@@ -1,0 +1,38 @@
+.first_row {
+    width: auto;
+    height: 90px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 15px;
+}
+.logo_img {
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+}
+.logo_img img, .account_info img {
+    width: 50px;
+}
+.leftbar {
+    float: left;
+    height: 100px;
+    background-color: #e85c38;
+    height: 180px;
+    padding-right: 3px;
+}
+.project, .history, .modify {
+    height: 60px;
+    display: block;
+    text-align: center;
+}
+.project, .history, .modify a {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: #5d5e60;
+}
+
+
+.st1_content {
+    height: 100px;
+    background-color: burlywood;
+}
