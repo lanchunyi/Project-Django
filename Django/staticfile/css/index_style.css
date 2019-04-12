@@ -28,10 +28,16 @@
 .project, .history, .modify a {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
+    color: #5d5e60;
 }
 
 
 .st1_content {
-    height: 100px;
+    height: auto;
     background-color: burlywood;
+}
+
+#myechart div canvas{
+    background-color: bisque;
+    box-shadow: 0 2px 5px 0 #5d5e60; 
 }

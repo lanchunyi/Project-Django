@@ -7,9 +7,12 @@
        {% endblock  %}
        </title>
        {% load static %}
-       <link rel="stylesheet" href="{% static '\css\bootstrap.css' %}"/>
-       <link rel="stylesheet" href="{% static '\css\style.css' %}"/>
-       <link rel="stylesheet" href="{% static '\css\index_style.css' %}"/>
+       <link rel="stylesheet" type="text/css" href="{% static '\css\bootstrap.css' %}"/>
+       <link rel="stylesheet" type="text/css" href="{% static '\css\style.css' %}"/>
+       <link rel="stylesheet" type="text/css" href="{% static '\css\index_style.css' %}"/>
+       <script type="text/javascript" async="async" src="{% static '/js/jquery-3.0.0.js' %}"></script>
+       {% block custom_static %}
+       {% endblock custom_static %}
     </head>
     <body>
        <div class='site'>

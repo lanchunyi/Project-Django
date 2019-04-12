@@ -2,6 +2,12 @@
 {% block title %}
 index
 {% endblock title %}
+{% load static %}
+{% block custom_static %}
+<script type="text/javascript" src="{% static '/js/echarts.min.js' %}"></script>
+<script type="text/javascript" async="async" src="{% static '/js/index.js' %}"></script>
+{% endblock custom_static %}
+
 {% block head %}
 <dir class="row first_row">
     <div class='logo_dec col-md-4'>
@@ -46,6 +52,8 @@ index
         </div>
     </div>
     <div class='st1_content col-md-10'>
+        <div id="myechart" class='echarts_wg' style="width: 600px; height: 400px;"></div>
+        <div class='infos_wg'></div>
     </div>
 </div>
 {% endblock st_content %}
