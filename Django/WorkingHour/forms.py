@@ -9,6 +9,5 @@ class LoginForm(forms.Form):
         user = self.data["user"]
         passwd = self.data["passwd"]
         auth = ldapAuth(user, passwd)
-
         if(not auth.ldapconn()):
             raise forms.ValidationError("User Verification failed.")

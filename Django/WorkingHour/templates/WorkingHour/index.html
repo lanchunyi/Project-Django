@@ -31,7 +31,7 @@ index
                 <img src={% static '/imgs/g.png' %}/>
             </div>
             <div class='username col-md-2'>
-                <h3>account</h3>
+                <h3>{{ username }}</h3>
             </div>
         </div>
     </div>
@@ -52,8 +52,8 @@ index
         </div>
     </div>
     <div class='st1_content col-md-10'>
-        <div id="myechart" class='echarts_wg' style="width: 600px; height: 400px;"></div>
-        <div class='infos_wg'></div>
+        <div id="myechart" class='echarts_wg col-md-6' style="width: 600px; height: 400px;"></div>
+        <div id='infos_wg' class='col-md-6' style="width: 600px; height: 400px;"></div>
     </div>
 </div>
 {% endblock st_content %}

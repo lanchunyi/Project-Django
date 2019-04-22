@@ -52,8 +52,13 @@
                </div>
             </div>
             {% endblock st_content %}
+
          </div>
        </div>
+       {% block js %}
+       {% load static %}
+       <script type="text/javascript" src="{% static '\js\login.js' %}"/>
+       {% endblock js %}
     </body>
 
 </html>

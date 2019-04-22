@@ -25,19 +25,23 @@
     display: block;
     text-align: center;
 }
+
 .project, .history, .modify a {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     color: #5d5e60;
 }
 
-
 .st1_content {
     height: auto;
     background-color: burlywood;
 }
 
-#myechart div canvas{
+#myechart, #infos_wg {
+    display: inline-block;
+}
+
+#myechart div canvas, #infos_wg div canvas {
     background-color: bisque;
-    box-shadow: 0 2px 5px 0 #5d5e60; 
+    box-shadow: 0 2px 5px 0 #5d5e60;
 }
