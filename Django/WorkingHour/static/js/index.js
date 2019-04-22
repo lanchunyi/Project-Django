@@ -25,5 +25,3 @@ echarts_wg.setOption(option);
 
 var echarts_b = echarts.init(document.getElementById('infos_wg'), 'light')
 echarts_b.setOption(option)
-
-var username = document.getElementsByClassName('username col-md-2').innerHTML("<h2>" + )
