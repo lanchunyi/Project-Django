@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Django URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -17,14 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from django.views import static
-import WorkingHour.views as views
 from Django import settings
 
+import WorkingHour.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
     path("login/", views.login),
-    path("index", views.index),
+    path("index", views.IndexView.as_view()),
+    path("ajax_valid", views.ajax_valid),
     url(r'^static/(?P<path>.*)$', static.serve,
         {'document_root': settings.STATIC_ROOT}, name='static')  # 解决静态文件加载失败问题
 ]
